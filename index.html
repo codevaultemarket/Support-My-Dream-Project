@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Support My Dream Project | ادعم مشروعي</title>
+
+  <meta
+    name="description"
+    content="Support a young entrepreneur building a real-life online business project. Choose any amount and help make the dream real."
+  />
+
+  <meta name="theme-color" content="#0f172a" />
+
+  <!-- Main CSS File -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Font Awesome Icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  />
+
+  <!-- 
+    PAYPAL SDK PLACE:
+    عندما تريد ربط PayPal الحقيقي، ضع Client ID مكان YOUR_PAYPAL_CLIENT_ID_HERE.
+    هذا ليس في HTML فقط، الدفع الحقيقي يحتاج JavaScript أيضا.
+    
+    مثال:
+    <script src="https://www.paypal.com/sdk/js?client-id=YOUR_PAYPAL_CLIENT_ID_HERE&currency=USD"></script>
+  -->
+  <script src="https://www.paypal.com/sdk/js?client-id=YOUR_PAYPAL_CLIENT_ID_HERE&currency=USD"></script>
+</head>
+
+<body>
+
+  <!-- ================= HEADER ================= -->
+  <header class="site-header">
+    <nav class="navbar">
+
+      <a href="#" class="brand">
+        <span class="brand-icon">
+          <i class="fa-solid fa-seedling"></i>
+        </span>
+        <span class="brand-text">
+          <strong>Build My Dream</strong>
+          <small>Support Project</small>
+        </span>
+      </a>
+
+      <div class="nav-links">
+        <a href="#story">Story</a>
+        <a href="#goal">Goal</a>
+        <a href="#support">Support</a>
+        <a href="#updates">Updates</a>
+      </div>
+
+      <a href="#support" class="nav-btn">
+        Support Now
+      </a>
+
+    </nav>
+  </header>
+
+
+  <!-- ================= HERO SECTION ================= -->
+  <main>
+
+    <section class="hero-section" id="home">
+
+      <div class="hero-bg-shape shape-one"></div>
+      <div class="hero-bg-shape shape-two"></div>
+
+      <div class="container hero-container">
+
+        <div class="hero-content">
+
+          <div class="hero-badge">
+            <i class="fa-solid fa-heart"></i>
+            <span>Small support can build a big dream</span>
+          </div>
+
+          <h1>
+            Help Me Build My
+            <span>Real Business Project</span>
+          </h1>
+
+          <p class="hero-description en-text">
+            I am working to build a real online project step by step. Your support will help me buy the tools, products,
+            and resources I need to turn this dream into a real business.
+          </p>
+
+          <p class="hero-description ar-text" dir="rtl">
+            أنا أعمل على بناء مشروع حقيقي خطوة بخطوة. دعمك سيساعدني على شراء الأدوات والسلع والموارد التي أحتاجها
+            لتحويل هذا الحلم إلى مشروع واقعي.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#support" class="primary-btn">
+              <i class="fa-brands fa-paypal"></i>
+              Support with PayPal
+            </a>
+
+            <a href="#story" class="secondary-btn">
+              Read My Story
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <div class="trust-row">
+            <div class="trust-item">
+              <i class="fa-solid fa-lock"></i>
+              <span>Secure PayPal Payment</span>
+            </div>
+
+            <div class="trust-item">
+              <i class="fa-solid fa-hand-holding-heart"></i>
+              <span>Any Amount Helps</span>
+            </div>
+
+            <div class="trust-item">
+              <i class="fa-solid fa-chart-line"></i>
+              <span>Goal Progress Visible</span>
+            </div>
+          </div>
+
+        </div>
+
+
+        <div class="hero-card">
+
+          <div class="project-card">
+
+            <div class="project-card-top">
+              <span class="live-dot"></span>
+              <span>Project Funding Goal</span>
+            </div>
+
+            <h2>$2,000</h2>
+            <p>Target to start buying products, tools, stock, and business resources.</p>
+
+            <!-- 
+              أنت تتحكم هنا في المبلغ الذي جمعته يدويا:
+              data-raised="400" يعني جمعت 400 دولار
+              data-goal="2000" يعني الهدف 2000 دولار
+            -->
+            <div
+              class="progress-box"
+              id="mainProgress"
+              data-raised="0"
+              data-goal="2000"
+            >
+              <div class="progress-info">
+                <span>Raised</span>
+                <strong id="raisedText">$0</strong>
+              </div>
+
+              <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+              </div>
+
+              <div class="progress-footer">
+                <span id="percentText">0%</span>
+                <span>Goal: $2,000</span>
+              </div>
+            </div>
+
+            <div class="quick-stats">
+              <div>
+                <strong>$1</strong>
+                <span>Minimum</span>
+              </div>
+
+              <div>
+                <strong>$200</strong>
+                <span>Max Quick</span>
+              </div>
+
+              <div>
+                <strong>100%</strong>
+                <span>For Project</span>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ================= STORY SECTION ================= -->
+    <section class="story-section" id="story">
+      <div class="container story-container">
+
+        <div class="section-heading">
+          <span class="section-tag">My Story</span>
+          <h2>Why I Need Your Support</h2>
+          <p>
+            This is not just a donation page. It is a small step toward building something real.
+          </p>
+        </div>
+
+        <div class="story-grid">
+
+          <article class="story-card">
+            <div class="story-icon">
+              <i class="fa-solid fa-box-open"></i>
+            </div>
+            <h3>Buying Real Products</h3>
+            <p>
+              Your support will help me buy products, tools, and materials to start and grow my project in real life.
+            </p>
+          </article>
+
+          <article class="story-card">
+            <div class="story-icon">
+              <i class="fa-solid fa-laptop-code"></i>
+            </div>
+            <h3>Building Online</h3>
+            <p>
+              I want to combine online work with real business, creating a project that can grow step by step.
+            </p>
+          </article>
+
+          <article class="story-card">
+            <div class="story-icon">
+              <i class="fa-solid fa-rocket"></i>
+            </div>
+            <h3>Starting From Zero</h3>
+            <p>
+              Even a small amount can help me move faster, buy better resources, and continue building my dream.
+            </p>
+          </article>
+
+        </div>
+
+        <div class="arabic-story-box" dir="rtl">
+          <h3>رسالتي بالعربية</h3>
+          <p>
+            أحاول بناء مشروع أونلاين وحقيقي في نفس الوقت، وأحتاج إلى دعم بسيط من الأشخاص الذين يؤمنون بالبدايات الصغيرة.
+            أي مبلغ—even لو كان بسيطًا—سيساعدني على شراء الأدوات والسلع التي أحتاجها لكي أبدأ مشروعي بطريقة أفضل.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ================= GOAL SECTION ================= -->
+    <section class="goal-section" id="goal">
+      <div class="container goal-container">
+
+        <div class="goal-content">
+
+          <span class="section-tag">Project Goal</span>
+
+          <h2>Where The Money Will Go</h2>
+
+          <p>
+            The goal is to collect <strong>$2,000</strong> to help launch the first version of my project. Every contribution
+            will be used to move the project forward.
+          </p>
+
+          <ul class="goal-list">
+            <li>
+              <i class="fa-solid fa-check"></i>
+              Buying first products and stock
+            </li>
+
+            <li>
+              <i class="fa-solid fa-check"></i>
+              Paying for online tools and platforms
+            </li>
+
+            <li>
+              <i class="fa-solid fa-check"></i>
+              Creating branding and business materials
+            </li>
+
+            <li>
+              <i class="fa-solid fa-check"></i>
+              Building a stronger online presence
+            </li>
+
+            <li>
+              <i class="fa-solid fa-check"></i>
+              Improving the project step by step
+            </li>
+          </ul>
+
+        </div>
+
+        <div class="goal-visual">
+
+          <div class="goal-card active">
+            <span>01</span>
+            <h3>Start</h3>
+            <p>Collect the first support and prepare the basic tools.</p>
+          </div>
+
+          <div class="goal-card">
+            <span>02</span>
+            <h3>Buy</h3>
+            <p>Purchase products, materials, and resources for the project.</p>
+          </div>
+
+          <div class="goal-card">
+            <span>03</span>
+            <h3>Build</h3>
+            <p>Create the project and share updates with supporters.</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ================= SUPPORT SECTION ================= -->
+    <section class="support-section" id="support">
+      <div class="container support-container">
+
+        <div class="section-heading">
+          <span class="section-tag">Support Now</span>
+          <h2>Choose Any Amount</h2>
+          <p>
+            You can support with a small amount or choose your own custom amount.
+          </p>
+        </div>
+
+        <div class="support-layout">
+
+          <div class="donation-panel">
+
+            <h3>Select Support Amount</h3>
+
+            <div class="amount-grid">
+
+              <button class="amount-btn active" data-amount="1">
+                $1
+                <span>Small Help</span>
+              </button>
+
+              <button class="amount-btn" data-amount="5">
+                $5
+                <span>Kind Support</span>
+              </button>
+
+              <button class="amount-btn" data-amount="10">
+                $10
+                <span>Strong Help</span>
+              </button>
+
+              <button class="amount-btn" data-amount="25">
+                $25
+                <span>Project Boost</span>
+              </button>
+
+              <button class="amount-btn" data-amount="50">
+                $50
+                <span>Big Support</span>
+              </button>
+
+              <button class="amount-btn" data-amount="100">
+                $100
+                <span>Dream Builder</span>
+              </button>
+
+              <button class="amount-btn" data-amount="200">
+                $200
+                <span>Major Support</span>
+              </button>
+
+            </div>
+
+            <div class="custom-amount-box">
+              <label for="customAmount">Or enter custom amount</label>
+
+              <div class="custom-input-wrapper">
+                <span>$</span>
+                <input
+                  type="number"
+                  id="customAmount"
+                  min="1"
+                  max="2000"
+                  placeholder="Enter amount"
+                />
+              </div>
+            </div>
+
+            <div class="selected-amount-box">
+              <span>Selected Amount</span>
+              <strong id="selectedAmountText">$1</strong>
+            </div>
+
+            <!-- 
+              PAYPAL BUTTONS WILL APPEAR HERE BY JAVASCRIPT.
+              في كود JavaScript القادم سنجعل أزرار PayPal تظهر هنا.
+            -->
+            <div id="paypal-button-container" class="paypal-box">
+              <p class="paypal-placeholder">
+                PayPal button will load here after adding JavaScript.
+              </p>
+            </div>
+
+            <!-- 
+              رابط PayPal مباشر احتياطي:
+              ضع رابط PayPal.me الخاص بك هنا إذا كنت تريد زر بسيط.
+              مثال:
+              https://www.paypal.com/paypalme/YourName
+            -->
+            <a
+              href="https://www.paypal.com/paypalme/YOUR_PAYPAL_USERNAME"
+              target="_blank"
+              class="paypal-direct-link"
+              id="paypalDirectLink"
+            >
+              <i class="fa-brands fa-paypal"></i>
+              Pay directly with PayPal
+            </a>
+
+            <p class="secure-note">
+              <i class="fa-solid fa-shield-halved"></i>
+              Payments are processed securely by PayPal.
+            </p>
+
+          </div>
+
+
+          <aside class="impact-panel">
+
+            <h3>Your Support Creates Impact</h3>
+
+            <div class="impact-list">
+
+              <div class="impact-item">
+                <div class="impact-icon">
+                  <i class="fa-solid fa-dollar-sign"></i>
+                </div>
+                <div>
+                  <strong>$1 - $5</strong>
+                  <span>Helps with small tools and basic resources.</span>
+                </div>
+              </div>
+
+              <div class="impact-item">
+                <div class="impact-icon">
+                  <i class="fa-solid fa-box"></i>
+                </div>
+                <div>
+                  <strong>$10 - $25</strong>
+                  <span>Helps buy useful materials for the project.</span>
+                </div>
+              </div>
+
+              <div class="impact-item">
+                <div class="impact-icon">
+                  <i class="fa-solid fa-store"></i>
+                </div>
+                <div>
+                  <strong>$50 - $100</strong>
+                  <span>Helps build the first real business setup.</span>
+                </div>
+              </div>
+
+              <div class="impact-item">
+                <div class="impact-icon">
+                  <i class="fa-solid fa-crown"></i>
+                </div>
+                <div>
+                  <strong>$200+</strong>
+                  <span>Gives a strong push toward launching the project faster.</span>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="thank-you-box" dir="rtl">
+              <h4>شكرا من القلب ❤️</h4>
+              <p>
+                دعمك ليس مجرد مبلغ، بل دفعة حقيقية لشخص يحاول أن يبدأ مشروعه ويبني مستقبله خطوة بخطوة.
+              </p>
+            </div>
+
+          </aside>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ================= TRANSPARENCY SECTION ================= -->
+    <section class="transparency-section">
+      <div class="container transparency-container">
+
+        <div class="section-heading">
+          <span class="section-tag">Transparency</span>
+          <h2>Manual Progress Updates</h2>
+          <p>
+            I will manually update the total amount raised so everyone can see the progress toward the goal.
+          </p>
+        </div>
+
+        <div class="manual-update-card">
+
+          <div class="manual-icon">
+            <i class="fa-solid fa-pen-to-square"></i>
+          </div>
+
+          <div>
+            <h3>Current Raised Amount</h3>
+            <p>
+              The amount shown on this website is updated manually by me after receiving support.
+            </p>
+          </div>
+
+          <div class="manual-number">
+            <strong id="manualRaisedText">$0</strong>
+            <span>of $2,000</span>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ================= UPDATES SECTION ================= -->
+    <section class="updates-section" id="updates">
+      <div class="container updates-container">
+
+        <div class="section-heading">
+          <span class="section-tag">Project Updates</span>
+          <h2>Follow The Journey</h2>
+          <p>
+            I will share progress, purchases, and project steps here.
+          </p>
+        </div>
+
+        <div class="updates-grid">
+
+          <article class="update-card">
+            <span class="update-date">Step 01</span>
+            <h3>Launching Support Page</h3>
+            <p>
+              This website is the first step to collect support and start building the project.
+            </p>
+          </article>
+
+          <article class="update-card">
+            <span class="update-date">Step 02</span>
+            <h3>Buying First Resources</h3>
+            <p>
+              After receiving support, I will start buying the first tools, stock, and project resources.
+            </p>
+          </article>
+
+          <article class="update-card">
+            <span class="update-date">Step 03</span>
+            <h3>Sharing Real Progress</h3>
+            <p>
+              I will keep updating the progress so supporters can see how the project is growing.
+            </p>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ================= FINAL CTA ================= -->
+    <section class="final-cta-section">
+      <div class="container final-cta-container">
+
+        <h2>Be Part of The Beginning</h2>
+
+        <p>
+          Every big project starts with a small first step. Your support can help this dream become real.
+        </p>
+
+        <a href="#support" class="primary-btn large-btn">
+          <i class="fa-solid fa-heart"></i>
+          Support The Project
+        </a>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+
+    <div class="container footer-container">
+
+      <div class="footer-brand">
+        <a href="#" class="brand">
+          <span class="brand-icon">
+            <i class="fa-solid fa-seedling"></i>
+          </span>
+          <span class="brand-text">
+            <strong>Build My Dream</strong>
+            <small>Support Project</small>
+          </span>
+        </a>
+
+        <p>
+          A personal support page created to help build a real online business project.
+        </p>
+      </div>
+
+      <div class="footer-links">
+        <h4>Links</h4>
+        <a href="#story">My Story</a>
+        <a href="#goal">Project Goal</a>
+        <a href="#support">Support</a>
+        <a href="#updates">Updates</a>
+      </div>
+
+      <div class="footer-contact">
+        <h4>Contact</h4>
+
+        <!-- غيّر هذه الروابط بمعلوماتك -->
+        <a href="mailto:your-email@example.com">
+          <i class="fa-solid fa-envelope"></i>
+          your-email@example.com
+        </a>
+
+        <a href="https://www.instagram.com/YOUR_INSTAGRAM_USERNAME" target="_blank">
+          <i class="fa-brands fa-instagram"></i>
+          Instagram
+        </a>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>
+        © 2026 Build My Dream. All rights reserved.
+      </p>
+    </div>
+
+  </footer>
+
+
+  <!-- Main JavaScript File -->
+  <script src="script.js"></script>
+
+</body>
+</html>
